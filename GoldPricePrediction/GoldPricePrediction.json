@@ -1,0 +1,200 @@
+{
+    "version": "54.0",
+    "nodes": {
+        "LOAD_DATASET0": {
+            "action": "load",
+            "parameters": {
+                "dataset": {
+                    "label": "Time Series - Gold Predictions",
+                    "name": "Time_Series_Gold_Predictions",
+                    "type": "analyticsDataset"
+                },
+                "fields": [
+                    "Date",
+                    "Egypt_EGP",
+                    "Thailand_THB",
+                    "India_INR",
+                    "Europe_EUR",
+                    "Switzerland_CHF",
+                    "Australia_AUD",
+                    "Turkey_TRY",
+                    "United_Arab_Emirates_AED",
+                    "Indonesia_IDR",
+                    "United_Kingdom_GBP",
+                    "Japan_JPY",
+                    "China_CNY",
+                    "United_States_USD",
+                    "South_Korean_KRW",
+                    "Canada_CAD",
+                    "Saudi_Arabia_SAR",
+                    "South_Africa_ZAR",
+                    "Vietnam_VND"
+                ]
+            },
+            "sources": []
+        },
+        "EXTRACT0": {
+            "action": "extractGrains",
+            "parameters": {
+                "grainExtractions": [
+                    {
+                        "source": "Date",
+                        "targets": [
+                            {
+                                "grainType": "MONTH",
+                                "label": "Date Month",
+                                "name": "Date_MONTH"
+                            },
+                            {
+                                "grainType": "YEAR",
+                                "label": "Date Year",
+                                "name": "Date_YEAR"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "sources": [
+                "LOAD_DATASET0"
+            ]
+        },
+        "AGGREGATE1": {
+            "action": "aggregate",
+            "parameters": {
+                "aggregations": [
+                    {
+                        "action": "SUM",
+                        "label": "Sum of United States(USD)",
+                        "name": "SUM_United_States_USD",
+                        "source": "United_States_USD"
+                    }
+                ],
+                "groupings": [
+                    "Date_MONTH",
+                    "Date_YEAR"
+                ],
+                "nodeType": "STANDARD",
+                "pivots": []
+            },
+            "sources": [
+                "EXTRACT0"
+            ]
+        },
+        "TIME_SERIES0": {
+            "action": "timeSeries",
+            "parameters": {
+                "confidenceInterval": "95",
+                "confidenceIntervalFields": {
+                    "SUM_United_States_USD_forecast": {
+                        "high": {
+                            "label": "Sum of United States(USD) Forecast (High 95)",
+                            "name": "SUM_United_States_USD_forecast95_High"
+                        },
+                        "low": {
+                            "label": "Sum of United States(USD) Forecast (Low 95)",
+                            "name": "SUM_United_States_USD_forecast95_Low"
+                        }
+                    }
+                },
+                "dayField": "",
+                "forecastFields": [
+                    "SUM_United_States_USD"
+                ],
+                "forecastLength": 5,
+                "groupDatesBy": "Y-M",
+                "ignoreLastTimePeriod": false,
+                "model": "Auto",
+                "seasonality": 1,
+                "subYearField": "Date_MONTH",
+                "targetDateField": {
+                    "label": "Date",
+                    "name": "Forecast_Date"
+                },
+                "targetForecastFields": [
+                    {
+                        "label": "Sum of United States(USD) Forecast",
+                        "name": "SUM_United_States_USD_forecast"
+                    }
+                ],
+                "yearField": "Date_YEAR"
+            },
+            "sources": [
+                "AGGREGATE1"
+            ]
+        },
+        "OUTPUT0": {
+            "action": "save",
+            "parameters": {
+                "dataset": {
+                    "label": "Gold Price - Prediction",
+                    "name": "Gold_Price_Prediction",
+                    "type": "analyticsDataset"
+                },
+                "fields": []
+            },
+            "sources": [
+                "TIME_SERIES0"
+            ]
+        }
+    },
+    "ui": {
+        "nodes": {
+            "LOAD_DATASET0": {
+                "label": "Time Series - Gold Predictions",
+                "type": "LOAD_DATASET",
+                "top": 112,
+                "left": 112,
+                "parameters": {
+                    "sampleSize": 2000
+                }
+            },
+            "AGGREGATE0": {
+                "label": "Aggregate",
+                "type": "AGGREGATE",
+                "top": 112,
+                "left": 252,
+                "graph": {
+                    "EXTRACT0": null,
+                    "AGGREGATE1": null
+                },
+                "connectors": [
+                    {
+                        "source": "EXTRACT0",
+                        "target": "AGGREGATE1"
+                    }
+                ]
+            },
+            "TRANSFORM0": {
+                "label": "Transform",
+                "type": "TRANSFORM",
+                "top": 112,
+                "left": 392,
+                "graph": {
+                    "TIME_SERIES0": null
+                },
+                "connectors": []
+            },
+            "OUTPUT0": {
+                "label": "Output",
+                "type": "OUTPUT",
+                "top": 112,
+                "left": 532
+            }
+        },
+        "connectors": [
+            {
+                "source": "LOAD_DATASET0",
+                "target": "AGGREGATE0"
+            },
+            {
+                "source": "AGGREGATE0",
+                "target": "TRANSFORM0"
+            },
+            {
+                "source": "TRANSFORM0",
+                "target": "OUTPUT0"
+            }
+        ],
+        "hiddenColumns": []
+    }
+}
