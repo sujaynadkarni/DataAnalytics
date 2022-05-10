@@ -1,0 +1,615 @@
+{
+    "version": "54.0",
+    "nodes": {
+        "LOAD_DATASET0": {
+            "action": "load",
+            "parameters": {
+                "dataset": {
+                    "label": "Accounts",
+                    "name": "account",
+                    "type": "analyticsDataset"
+                },
+                "fields": [
+                    "LastModifiedDate",
+                    "Owner.Role.RoleNames",
+                    "Owner.UniqueUserName",
+                    "Owner.UserManager.UniqueUserName",
+                    "Owner.FullPhotoUrl",
+                    "Owner.SmallPhotoUrl",
+                    "Owner.Role.ParentRole.Name",
+                    "Owner.Role.ParentRoleId",
+                    "Name",
+                    "Industry",
+                    "Owner.Role.Hierarchy_RoleNames",
+                    "OwnerId",
+                    "AccountSource",
+                    "Owner.UserManagerNames",
+                    "Owner.Role.Name",
+                    "Owner.UserRoleId",
+                    "Owner.Username",
+                    "Owner.Role.DeveloperName",
+                    "Owner.Role.ParentRole.ForecastManager.UniqueUserName",
+                    "Opportunity.Name",
+                    "Owner.Role.RoleNamesPath",
+                    "Owner.Name",
+                    "hasOpportunity",
+                    "Opportunity.Owner.Name",
+                    "Owner.Role.RolePath",
+                    "Opportunity.Id",
+                    "Owner.Role.Roles",
+                    "CustomFilter",
+                    "Owner.Role.ParentRole.DeveloperName",
+                    "Type",
+                    "CreatedDate",
+                    "ShippingState",
+                    "Id",
+                    "Owner.UserManager.Name",
+                    "BillingState",
+                    "AccountName",
+                    "NumberOfEmployees",
+                    "AnnualRevenue"
+                ]
+            },
+            "sources": []
+        },
+        "LOAD_DATASET1": {
+            "action": "load",
+            "parameters": {
+                "dataset": {
+                    "label": "Opportunities",
+                    "name": "opportunity",
+                    "type": "analyticsDataset"
+                },
+                "fields": [
+                    "LastModifiedDate",
+                    "Account.Type",
+                    "AccountId",
+                    "HasOpportunityLineItem",
+                    "IsLost",
+                    "Account.Owner.Role.RolePath",
+                    "Account.Owner.UniqueUserName",
+                    "ForecastCategory",
+                    "CloseDate",
+                    "Owner.Role.ParentRole.Name",
+                    "Name",
+                    "Owner.Role.Hierarchy_RoleNames",
+                    "CreatedById",
+                    "Owner.Role.Name",
+                    "Account.Owner.Role.Roles",
+                    "Owner.Username",
+                    "Owner.Role.DeveloperName",
+                    "Owner.Role.RoleNamesPath",
+                    "Account.Owner.UserManager.UniqueUserName",
+                    "Owner.Role.RolePath",
+                    "LeadSource",
+                    "Product.Product.Name",
+                    "CreatedDate",
+                    "Account.OwnerId",
+                    "Id",
+                    "ForecastCategoryName",
+                    "Owner.Role.RoleNames",
+                    "Account.ShippingState",
+                    "Owner.UniqueUserName",
+                    "Owner.UserManager.UniqueUserName",
+                    "Owner.FullPhotoUrl",
+                    "Account.Owner.UserManagerNames",
+                    "Account.Owner.Role.Name",
+                    "OpenClosedWonLost",
+                    "Account.Owner.UserManager.Name",
+                    "IsClosed",
+                    "RecordType.Name",
+                    "Owner.SmallPhotoUrl",
+                    "Owner.Role.ParentRoleId",
+                    "Account.Industry",
+                    "OwnerId",
+                    "IsWon",
+                    "Owner.UserManagerNames",
+                    "RecordTypeId",
+                    "Owner.UserRoleId",
+                    "Account.AccountSource",
+                    "Account.Owner.Role.ParentRoleId",
+                    "Owner.Role.ParentRole.ForecastManager.UniqueUserName",
+                    "Neglected",
+                    "Owner.Name"
+                ]
+            },
+            "sources": []
+        },
+        "LOAD_DATASET2": {
+            "action": "load",
+            "parameters": {
+                "dataset": {
+                    "label": "Cases",
+                    "name": "case",
+                    "type": "analyticsDataset"
+                },
+                "fields": [
+                    "Origin",
+                    "LastModifiedDate",
+                    "Account.ShippingState",
+                    "Account.Type",
+                    "AccountId",
+                    "Account.Owner.Role.RolePath",
+                    "Account.Owner.UniqueUserName",
+                    "Account.Owner.UserManagerNames",
+                    "Account.Owner.Role.Name",
+                    "Account.Owner.UserManager.Name",
+                    "ContactId",
+                    "IsClosed",
+                    "Account.Industry",
+                    "OwnerId",
+                    "CaseNumber",
+                    "Account.Owner.Role.Roles",
+                    "Account.AccountSource",
+                    "CurrentDate",
+                    "Account.Owner.Role.ParentRoleId",
+                    "Status",
+                    "Account.Owner.UserManager.UniqueUserName",
+                    "Account.BillingState",
+                    "Account.Owner.Name",
+                    "Subject",
+                    "Type",
+                    "IsEscalated",
+                    "CreatedDate",
+                    "Account.Name",
+                    "Account.OwnerId",
+                    "ClosedDate",
+                    "Id",
+                    "DurationCalculatedField",
+                    "Account.NumberOfEmployees",
+                    "Account.AnnualRevenue",
+                    "Opportunity.Amount"
+                ]
+            },
+            "sources": []
+        },
+        "JOIN0": {
+            "action": "join",
+            "parameters": {
+                "joinType": "LOOKUP",
+                "leftKeys": [
+                    "AccountId"
+                ],
+                "rightKeys": [
+                    "Id"
+                ],
+                "rightQualifier": "Accounts"
+            },
+            "schema": {
+                "fields": [],
+                "slice": {
+                    "fields": [],
+                    "ignoreMissingFields": true,
+                    "mode": "DROP"
+                }
+            },
+            "sources": [
+                "LOAD_DATASET1",
+                "LOAD_DATASET0"
+            ]
+        },
+        "JOIN1": {
+            "action": "join",
+            "parameters": {
+                "joinType": "LOOKUP",
+                "leftKeys": [
+                    "AccountId"
+                ],
+                "rightKeys": [
+                    "Id"
+                ],
+                "rightQualifier": "Accounts"
+            },
+            "schema": {
+                "fields": [],
+                "slice": {
+                    "fields": [],
+                    "ignoreMissingFields": true,
+                    "mode": "DROP"
+                }
+            },
+            "sources": [
+                "LOAD_DATASET2",
+                "LOAD_DATASET0"
+            ]
+        },
+        "EXTRACT0": {
+            "action": "extractGrains",
+            "parameters": {
+                "grainExtractions": []
+            },
+            "sources": [
+                "JOIN0"
+            ]
+        },
+        "AGGREGATE1": {
+            "action": "aggregate",
+            "parameters": {
+                "aggregations": [
+                    {
+                        "action": "COUNT",
+                        "label": "Rows",
+                        "name": "COUNT_Rows"
+                    }
+                ],
+                "groupings": [
+                    "AccountId"
+                ],
+                "nodeType": "STANDARD",
+                "pivots": []
+            },
+            "sources": [
+                "EXTRACT0"
+            ]
+        },
+        "EXTRACT1": {
+            "action": "extractGrains",
+            "parameters": {
+                "grainExtractions": []
+            },
+            "sources": [
+                "JOIN1"
+            ]
+        },
+        "AGGREGATE3": {
+            "action": "aggregate",
+            "parameters": {
+                "aggregations": [
+                    {
+                        "action": "COUNT",
+                        "label": "Rows",
+                        "name": "COUNT_Rows"
+                    }
+                ],
+                "groupings": [
+                    "AccountId"
+                ],
+                "nodeType": "STANDARD",
+                "pivots": []
+            },
+            "sources": [
+                "EXTRACT1"
+            ]
+        },
+        "JOIN2": {
+            "action": "join",
+            "parameters": {
+                "joinType": "INNER",
+                "leftKeys": [
+                    "AccountId"
+                ],
+                "rightKeys": [
+                    "AccountId"
+                ],
+                "rightQualifier": "Aggregate"
+            },
+            "schema": {
+                "fields": [],
+                "slice": {
+                    "fields": [],
+                    "ignoreMissingFields": true,
+                    "mode": "DROP"
+                }
+            },
+            "sources": [
+                "AGGREGATE3",
+                "AGGREGATE1"
+            ]
+        },
+        "EDIT_ATTRIBUTES0": {
+            "action": "schema",
+            "parameters": {
+                "fields": [
+                    {
+                        "name": "COUNT_Rows",
+                        "newProperties": {
+                            "label": "Number of Opps",
+                            "name": "Opps_Rows"
+                        }
+                    }
+                ]
+            },
+            "sources": [
+                "JOIN2"
+            ]
+        },
+        "EDIT_ATTRIBUTES1": {
+            "action": "schema",
+            "parameters": {
+                "fields": [
+                    {
+                        "name": "Aggregate.COUNT_Rows",
+                        "newProperties": {
+                            "label": "Number of Cases",
+                            "name": "Cases_Rows"
+                        }
+                    }
+                ]
+            },
+            "sources": [
+                "EDIT_ATTRIBUTES0"
+            ]
+        },
+        "FORMULA0": {
+            "action": "formula",
+            "parameters": {
+                "expressionType": "SQL",
+                "fields": [
+                    {
+                        "defaultValue": "",
+                        "formulaExpression": "case \n\twhen Opps_Rows > 10\n\tthen 5\n    when Opps_Rows >= 5 and Opps_Rows <= 10\n\tthen 3\n\t\n\telse\n\t0\nend",
+                        "label": "Opps Scoring",
+                        "name": "AccountId_formula",
+                        "precision": 10,
+                        "scale": 0,
+                        "type": "NUMBER"
+                    }
+                ]
+            },
+            "sources": [
+                "EDIT_ATTRIBUTES1"
+            ]
+        },
+        "FORMULA1": {
+            "action": "formula",
+            "parameters": {
+                "expressionType": "SQL",
+                "fields": [
+                    {
+                        "defaultValue": "",
+                        "formulaExpression": "case \n\twhen Cases_Rows > 10\n\tthen 0\n\n    when Cases_Rows >= 5 and Cases_Rows <= 10\n\tthen 3\n\telse\n\t5\nend",
+                        "label": "Case Scoring ",
+                        "name": "AccountId_formula_formula",
+                        "precision": 10,
+                        "scale": 0,
+                        "type": "NUMBER"
+                    }
+                ]
+            },
+            "sources": [
+                "FORMULA0"
+            ]
+        },
+        "FORMULA2": {
+            "action": "formula",
+            "parameters": {
+                "expressionType": "SQL",
+                "fields": [
+                    {
+                        "defaultValue": "",
+                        "formulaExpression": "(AccountId_formula + AccountId_formula_formula) / 2",
+                        "label": "Customer Satisfaction",
+                        "name": "AccountId_formula_formula1",
+                        "precision": 10,
+                        "scale": 0,
+                        "type": "NUMBER"
+                    }
+                ]
+            },
+            "sources": [
+                "FORMULA1"
+            ]
+        },
+        "DROP_FIELDS0": {
+            "action": "schema",
+            "parameters": {
+                "fields": [],
+                "slice": {
+                    "fields": [
+                        "Opps_Rows",
+                        "Aggregate.AccountId",
+                        "Cases_Rows",
+                        "AccountId_formula",
+                        "AccountId_formula_formula"
+                    ],
+                    "ignoreMissingFields": true,
+                    "mode": "DROP"
+                }
+            },
+            "sources": [
+                "FORMULA2"
+            ]
+        },
+        "OUTPUT0": {
+            "action": "outputExternal",
+            "parameters": {
+                "connectionName": "Output_Connector",
+                "externalIdFieldName": "Id",
+                "fieldsMapping": [
+                    {
+                        "sourceField": "AccountId",
+                        "targetField": "Id"
+                    },
+                    {
+                        "sourceField": "AccountId_formula_formula1",
+                        "targetField": "Customer_Satisfaction_Score__c"
+                    }
+                ],
+                "hyperFileName": "",
+                "object": "Account",
+                "operation": "upsert"
+            },
+            "sources": [
+                "DROP_FIELDS0"
+            ]
+        }
+    },
+    "ui": {
+        "nodes": {
+            "LOAD_DATASET0": {
+                "label": "Accounts",
+                "type": "LOAD_DATASET",
+                "top": 112,
+                "left": 112,
+                "parameters": {
+                    "sampleSize": 2000
+                }
+            },
+            "LOAD_DATASET1": {
+                "label": "Opportunities",
+                "type": "LOAD_DATASET",
+                "top": 252,
+                "left": 112,
+                "parameters": {
+                    "sampleSize": 2000
+                }
+            },
+            "LOAD_DATASET2": {
+                "label": "Cases",
+                "type": "LOAD_DATASET",
+                "top": 392,
+                "left": 112,
+                "parameters": {
+                    "sampleSize": 2000
+                }
+            },
+            "JOIN0": {
+                "label": "Join",
+                "type": "JOIN",
+                "top": 252,
+                "left": 252
+            },
+            "JOIN1": {
+                "label": "Join",
+                "type": "JOIN",
+                "top": 392,
+                "left": 252
+            },
+            "AGGREGATE0": {
+                "label": "Aggregate",
+                "type": "AGGREGATE",
+                "top": 252,
+                "left": 392,
+                "graph": {
+                    "EXTRACT0": null,
+                    "AGGREGATE1": null
+                },
+                "connectors": [
+                    {
+                        "source": "EXTRACT0",
+                        "target": "AGGREGATE1"
+                    }
+                ]
+            },
+            "AGGREGATE2": {
+                "label": "Aggregate",
+                "type": "AGGREGATE",
+                "top": 392,
+                "left": 392,
+                "graph": {
+                    "EXTRACT1": null,
+                    "AGGREGATE3": null
+                },
+                "connectors": [
+                    {
+                        "source": "EXTRACT1",
+                        "target": "AGGREGATE3"
+                    }
+                ]
+            },
+            "JOIN2": {
+                "label": "Join",
+                "type": "JOIN",
+                "top": 392,
+                "left": 532
+            },
+            "TRANSFORM0": {
+                "label": "Transform",
+                "type": "TRANSFORM",
+                "top": 392,
+                "left": 672,
+                "graph": {
+                    "EDIT_ATTRIBUTES0": null,
+                    "EDIT_ATTRIBUTES1": null,
+                    "FORMULA0": {
+                        "parameters": {
+                            "type": "BASE_FORMULA_UI"
+                        }
+                    },
+                    "FORMULA1": {
+                        "parameters": {
+                            "type": "BASE_FORMULA_UI"
+                        }
+                    },
+                    "FORMULA2": {
+                        "parameters": {
+                            "type": "BASE_FORMULA_UI"
+                        }
+                    },
+                    "DROP_FIELDS0": null
+                },
+                "connectors": [
+                    {
+                        "source": "EDIT_ATTRIBUTES0",
+                        "target": "EDIT_ATTRIBUTES1"
+                    },
+                    {
+                        "source": "EDIT_ATTRIBUTES1",
+                        "target": "FORMULA0"
+                    },
+                    {
+                        "source": "FORMULA0",
+                        "target": "FORMULA1"
+                    },
+                    {
+                        "source": "FORMULA1",
+                        "target": "FORMULA2"
+                    },
+                    {
+                        "source": "FORMULA2",
+                        "target": "DROP_FIELDS0"
+                    }
+                ]
+            },
+            "OUTPUT0": {
+                "label": "Output",
+                "type": "OUTPUT",
+                "top": 392,
+                "left": 812
+            }
+        },
+        "connectors": [
+            {
+                "source": "LOAD_DATASET1",
+                "target": "JOIN0"
+            },
+            {
+                "source": "LOAD_DATASET0",
+                "target": "JOIN0"
+            },
+            {
+                "source": "LOAD_DATASET2",
+                "target": "JOIN1"
+            },
+            {
+                "source": "LOAD_DATASET0",
+                "target": "JOIN1"
+            },
+            {
+                "source": "JOIN0",
+                "target": "AGGREGATE0"
+            },
+            {
+                "source": "JOIN1",
+                "target": "AGGREGATE2"
+            },
+            {
+                "source": "AGGREGATE2",
+                "target": "JOIN2"
+            },
+            {
+                "source": "AGGREGATE0",
+                "target": "JOIN2"
+            },
+            {
+                "source": "JOIN2",
+                "target": "TRANSFORM0"
+            },
+            {
+                "source": "TRANSFORM0",
+                "target": "OUTPUT0"
+            }
+        ],
+        "hiddenColumns": []
+    }
+}
