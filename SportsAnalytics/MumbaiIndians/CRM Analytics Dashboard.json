@@ -1,0 +1,2535 @@
+{
+    "label": "Mumbai Indians Dashboard",
+    "mobileDisabled": false,
+    "state": {
+        "dataSourceLinks": [],
+        "filters": [],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 12,
+                "pages": [
+                    {
+                        "label": "Team Statistics",
+                        "name": "0bb62762-ad12-40d1-8c0e-26f6a7494613",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 12,
+                                "column": 0,
+                                "name": "container_1",
+                                "row": 0,
+                                "rowspan": 4,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "image_1",
+                                "row": 0,
+                                "rowspan": 4,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 3,
+                                "name": "text_1",
+                                "row": 1,
+                                "rowspan": 2,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 5,
+                                "column": 0,
+                                "name": "chart_1",
+                                "row": 4,
+                                "rowspan": 6,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 5,
+                                "name": "chart_2",
+                                "row": 4,
+                                "rowspan": 6,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 5,
+                                "column": 0,
+                                "name": "chart_3",
+                                "row": 10,
+                                "rowspan": 5,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 5,
+                                "name": "chart_4",
+                                "row": 10,
+                                "rowspan": 5,
+                                "widgetStyle": {}
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Player Statistics",
+                        "name": "9a895df9-56f4-4369-acaf-153ad44d0223",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 12,
+                                "column": 0,
+                                "name": "container_1",
+                                "row": 0,
+                                "rowspan": 4,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "image_1",
+                                "row": 0,
+                                "rowspan": 4,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 3,
+                                "name": "text_1",
+                                "row": 1,
+                                "rowspan": 2,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 0,
+                                "name": "chart_5",
+                                "row": 4,
+                                "rowspan": 7,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 6,
+                                "name": "chart_6",
+                                "row": 4,
+                                "rowspan": 7,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 0,
+                                "name": "chart_7",
+                                "row": 11,
+                                "rowspan": 6,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 6,
+                                "name": "chart_8",
+                                "row": 11,
+                                "rowspan": 6,
+                                "widgetStyle": {}
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "normal",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "#FFFFFF",
+                    "cellSpacingX": 8,
+                    "cellSpacingY": 8,
+                    "fit": "original",
+                    "gutterColor": "#FFFFFF"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "TossDecision_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1TCAU",
+                        "label": "MumbaiIndiansMatchStats",
+                        "name": "MumbaiIndiansMatchStats",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1TCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "TossDecision"
+                    ],
+                    "filters": [
+                        [
+                            "WinningTeam",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "TossDecision"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Top_10_Bowlers_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1YCAU",
+                        "label": "BallbyBallAnalysis",
+                        "name": "BallbyBallAnalysis",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1YCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "Top 10 Bowlers",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "limit": 10,
+                    "groups": [
+                        "bowler"
+                    ],
+                    "filters": [
+                        [
+                            "isWicketDelivery",
+                            [
+                                "1"
+                            ],
+                            "in"
+                        ],
+                        [
+                            "bowler_formula",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ],
+                        [
+                            "kind",
+                            [
+                                "bowled",
+                                "caught",
+                                "caught and bowled",
+                                "hit wicket",
+                                "lbw",
+                                "stumped"
+                            ],
+                            "in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "count",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "bowler"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Venue_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1TCAU",
+                        "label": "MumbaiIndiansMatchStats",
+                        "name": "MumbaiIndiansMatchStats",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1TCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Venue"
+                    ],
+                    "filters": [
+                        [
+                            "WinningTeam",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "count",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Venue"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Player_of_Match_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1TCAU",
+                        "label": "MumbaiIndiansMatchStats",
+                        "name": "MumbaiIndiansMatchStats",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1TCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "limit": 10,
+                    "groups": [
+                        "Player_of_Match"
+                    ],
+                    "filters": [
+                        [
+                            "WinningTeam",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "count",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Player_of_Match"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Umpire1_formula_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1TCAU",
+                        "label": "MumbaiIndiansMatchStats",
+                        "name": "MumbaiIndiansMatchStats",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1TCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Umpire1_formula"
+                    ],
+                    "filters": [
+                        [
+                            "WinningTeam",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "count",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Umpire1_formula"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "BattingTeam_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1YCAU",
+                        "label": "BallbyBallAnalysis",
+                        "name": "BallbyBallAnalysis",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1YCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "BattingTeam"
+                    ],
+                    "filters": [
+                        [
+                            "isWicketDelivery",
+                            [
+                                "1"
+                            ],
+                            "in"
+                        ],
+                        [
+                            "bowler_formula",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "count",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "BattingTeam"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "TossWinner_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1TCAU",
+                        "label": "MumbaiIndiansMatchStats",
+                        "name": "MumbaiIndiansMatchStats",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1TCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "TossWinner"
+                    ],
+                    "filters": [
+                        [
+                            "WinningTeam",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ],
+                        [
+                            "TossWinner",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "not in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "count",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "TossWinner"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Top_Batsman_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1YCAU",
+                        "label": "BallbyBallAnalysis",
+                        "name": "BallbyBallAnalysis",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1YCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "Top Batsman",
+                "query": {
+                    "measures": [
+                        [
+                            "sum",
+                            "batsman_run"
+                        ]
+                    ],
+                    "limit": 10,
+                    "groups": [
+                        "batter"
+                    ],
+                    "filters": [
+                        [
+                            "BattingTeam",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "sum_batsman_run",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "batter"
+                            ],
+                            "plots": [
+                                "sum_batsman_run"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "bowler_formula1_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4x000000tT1YCAU",
+                        "label": "BallbyBallAnalysis",
+                        "name": "BallbyBallAnalysis",
+                        "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1YCAU"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "bowler_formula1"
+                    ],
+                    "filters": [
+                        [
+                            "BattingTeam",
+                            [
+                                "Mumbai Indians"
+                            ],
+                            "in"
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "centerText": "",
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "showMeasureTitle": true,
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "pie",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "inner": 60,
+                        "columnMap": {
+                            "trellis": [],
+                            "dimension": [
+                                "bowler_formula1"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "centerValueType": "number",
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#E6ECF2",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "container_1": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original"
+                },
+                "type": "container"
+            },
+            "text_1": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#091a3e",
+                                    "size": "32px",
+                                    "bold": true
+                                },
+                                "insert": "Insights to Winning Performance"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "image_1": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "fitheight",
+                    "image": {
+                        "name": "mumbai_indianspng1",
+                        "namespace": ""
+                    }
+                },
+                "type": "image"
+            },
+            "chart_6": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "centerText": "",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "showMeasureTitle": true,
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "pie",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 24,
+                        "subtitleFontSize": 11,
+                        "label": "Number of Boundaries",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "inner": 60,
+                    "columnMap": {
+                        "trellis": [],
+                        "dimension": [
+                            "bowler_formula1"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "centerValueType": "number",
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "theme": "wave",
+                    "step": "bowler_formula1_1",
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_5": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": false,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 24,
+                        "subtitleFontSize": 11,
+                        "label": "Top 10 Run Scorers",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "batter"
+                        ],
+                        "plots": [
+                            "sum_batsman_run"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "Top_Batsman_1",
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_8": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "BattingTeam"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "BattingTeam_1",
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_7": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 24,
+                        "subtitleFontSize": 11,
+                        "label": "Top 10 Bowlers",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "bowler"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "Top_10_Bowlers_1",
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_2": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 24,
+                        "subtitleFontSize": 11,
+                        "label": "Mumbai often wins toss against",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "TossWinner"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "TossWinner_1",
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_1": {
+                "parameters": {
+                    "centerText": "",
+                    "legend": {
+                        "descOrder": true,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "showMeasureTitle": false,
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "pie",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 24,
+                        "subtitleFontSize": 11,
+                        "label": "Mumbai Likes to",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "inner": 20,
+                    "columnMap": {
+                        "trellis": [],
+                        "dimension": [
+                            "TossDecision"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "centerValueType": "number",
+                    "valueType": "compactNumber",
+                    "theme": "wave",
+                    "step": "TossDecision_1",
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_4": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 24,
+                        "subtitleFontSize": 11,
+                        "label": "Mumbai Wins Against",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "Umpire1_formula"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "Umpire1_formula_1",
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_3": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 24,
+                        "subtitleFontSize": 11,
+                        "label": "Mumbai Loves to Play At",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "Venue"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "Venue_1",
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            }
+        }
+    },
+    "datasets": [
+        {
+            "id": "0Fb4x000000tT1TCAU",
+            "label": "MumbaiIndiansMatchStats",
+            "name": "MumbaiIndiansMatchStats",
+            "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1TCAU"
+        },
+        {
+            "id": "0Fb4x000000tT1YCAU",
+            "label": "BallbyBallAnalysis",
+            "name": "BallbyBallAnalysis",
+            "url": "/services/data/v54.0/wave/datasets/0Fb4x000000tT1YCAU"
+        }
+    ]
+}
