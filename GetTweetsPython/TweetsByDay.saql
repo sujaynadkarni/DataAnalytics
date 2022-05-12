@@ -1,0 +1,5 @@
+q = load "tweets_count_BTC";
+q = group q by ('start_Year', 'start_Month', 'start_Day');
+q = foreach q generate 'start_Year' + "~~~" + 'start_Month' + "~~~" + 'start_Day' as 'start_Year~~~start_Month~~~start_Day', sum('tweet_count') as 'sum_tweet_count';
+q = order q by 'start_Year~~~start_Month~~~start_Day' asc;
+q = limit q 2000;
