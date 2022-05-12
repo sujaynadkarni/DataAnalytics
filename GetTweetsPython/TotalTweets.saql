@@ -1,0 +1,4 @@
+q = load "tweets_count_BTC";
+q = group q by all;
+q = foreach q generate sum('tweet_count') as 'sum_tweet_count';
+q = limit q 2000;
