@@ -1,0 +1,5 @@
+q = load "OptywithUserURL";
+result = group q by 'User.Name';
+result = foreach result generate q.'User.Name' as 'User.Name', sum(q.'Amount') as 'A', first(q.'User.FullPhotoUrl') as 'B';
+result = order result by ('A' desc);
+result = limit result 2000;
